@@ -208,3 +208,5 @@ ib_write_bw -a -d mlx5_1 &
 Client
 ib_write_bw -a -F $server_IP -d mlx5_1 --report_gbits
 ```
+> 针对启用了用户命名空间的容器环境，则需要在启动容器时加上``--userns=host``参数，例如
+> docker run -it --privileged --userns=host --name=mnlx-verbs-prvlg --name=my-verbs-nonprvlg mellanox/mofed421_docker:latest bash
