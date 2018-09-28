@@ -20,5 +20,5 @@ sudo gpasswd -a ${USER} docker
 sudo systemctl restart docker
 ```
 > 如果普通用户执行docker命令，如果提示get …… dial unix /var/run/docker.sock权限不够，则修改/var/run/docker.sock权限,使用root用户执行如下命令   
-> sudo chmod a+rw /var/run/docker.sock
+> sudo chmod a+rw /var/run/docker.sock   
 Q3：docker代理配置
