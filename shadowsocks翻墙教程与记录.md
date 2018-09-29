@@ -169,4 +169,5 @@ Proxy SwitchyOmega下载地址： ```https://github.com/FelisCatus/SwitchyOmega/
 |直接连接|所有访问都不是使用代理。|
 |系统代理|访问网站与系统的默认代理有关。|
 |Shadowsocks|所有访问都使用代理。|
-|自动切换|所有访问都使用代理。|
+|自动切换|根据GFWList自动调节使用代理。|
+> 日常使用推荐自动切换模式
