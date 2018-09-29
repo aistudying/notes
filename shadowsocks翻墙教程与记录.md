@@ -8,7 +8,7 @@ https://ss.freess.org/index.html
 https://portal.shadowsocks.to/cart.php?gid=1
 ```
 ### 使用vps搭建shadowsocks server
-vps推荐：Google(免费一年), AWS(免费一年), Azure(免费一年), Vultr(前面都用过了就用这个吧，每月3刀)   
+vps推荐：Google(免费一年), AWS(免费一年), Azure(免费一年), [Vultr](https://www.vultr.com/?ref=7245210)(前面都用过了就用这个吧，每月3刀)   
 安装脚本：
 ```
 wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh
@@ -74,6 +74,8 @@ chmod +x bbr.sh
 ```
 ## 客户端：
 ### windows客户端
+> 详细的设置文档请参考[Shadowsocks 设置方法 (Windows)](https://github.com/Shadowsocks-Wiki/shadowsocks/blob/master/2-windows-setup-guide-cn.md)   
+
 下载地址：
 ```
 https://github.com/shadowsocks/shadowsocks-windows/releases
@@ -101,9 +103,15 @@ vps服务器添加方法:
 右键状态栏shadowsocks图标 > "启用系统代理”
 ```
 设置代理模式:    
-全局代理:所有internet访问均走代理服务器的链路
+全局模式: 所有internet访问均走代理服务器的链路
 ```
 右键状态栏shadowsocks图标 > "系统代理模式" > "全局模式"
 ```
-PAC模式
-
+PAC模式: 自动代理, 本来可以访问的网站不会经过代理, 推荐日常使用
+```
+右键状态栏shadowsocks图标 > "系统代理模式" > "PAC模式"
+右键状态栏shadowsocks图标 > "PAC" > "本地PAC"
+右键状态栏shadowsocks图标 > "PAC" > "从GFWList更新本地PAC"
+```
+此时系统内的所有浏览器就应该可以访问被GFW墙掉的网站了
+### Ubuntu客户端
