@@ -115,3 +115,58 @@ PAC模式: 自动代理, 本来可以访问的网站不会经过代理, 推荐�
 ```
 此时系统内的所有浏览器就应该可以访问被GFW墙掉的网站了
 ### Ubuntu客户端
+安装shadowsocks-qt5
+```
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+```
+添加服务器信息   
+手动添加vps服务器信息
+```
+"Connection" > "Add" > "Manually"
+
+填写 "Server Address" （为你的节点服务器地址）> 填写"Server Port"（为你的服务端口) > 填写 "Password" （为你的登陆密码)。
+在 "Local Address" 处填上 "127.0.0.1" > 在 "local Port" 处填上 "1080" > 选择 "Encryption Method" （为你的加密方式)。
+勾选 "Auto connect to connect on application start", 将会在开启 Shadowsocks-QT5 时自动连接至该服务器。
+```
+二维码方式添加服务器信息
+```
+"Connection" > "Add" > "Scan QR code on Screen" > 当弹出新的 "Profile Editor"后，点击 "OK"。
+```
+
+终端内使用，需安裝 proxychains
+```
+sudo apt-get install proxychains
+vim /etc/proxychains.conf
+
+修改最后一行
+socks5 127.0.0.1 1080
+```
+接着就可以直接 用 proxychains + 命令的方式使用代理，例如
+```
+proxychains curl xxxx
+proxychains wget xxxx
+
+sudo proxychains apt-get xxxx
+```
+浏览器使用代理需要和Proxy SwitchyOmega插件配合使用   
+   
+Proxy SwitchyOmega下载地址： ```https://github.com/FelisCatus/SwitchyOmega/releases```   
+火狐浏览器可以直接在插件商店中下载   
+谷歌浏览器访问 chrome://extensions/ 进入插件页面   
+将下载的 SwitchyOmega.crx 文件拖入 chrome://extensions/ 页面来安装插件   
+
+这里提供一个配置文件的下载地址：https://portal.shadowsocks.to/dl.php?type=d&id=74   
+* 点击 “Proxy SwitchyOmega” > "选项" > "导入/导出" > "从备份文件中恢复" 。
+
+* 选择刚才下载的配置文件 > "打开"。
+* 点击 "Switchyomega" 图标， 可以看到如下四个模式：
+
+
+|连接方式|功能|
+|--------|:--------:|
+|直接连接|所有访问都不是使用代理。|
+|系统代理|访问网站与系统的默认代理有关。|
+|Shadowsocks|所有访问都使用代理。|
+|自动切换|所有访问都使用代理。|
