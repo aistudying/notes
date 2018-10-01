@@ -109,7 +109,7 @@ rss: /atom.xml
 ```shell
 $ hexo new page categories
 ```
-2、你会发现你的`source`文件夹下有了`categorcies/index.md`，打开`index.md`文件将`title`设置为`title: 分类`
+2、你会发现你的`source`文件夹下有了`categorcies/index.md`，打开`index.md`文件将`title`设置为`title: 分类`   
 3、打开**主题配置文件**找到`menu`，将`categorcies`取消注释，分类模块即添加完成   
 
 4、写文章时只需在文章的顶部标题下方添加categories字段，即可自动创建分类名并加入对应的分类中
@@ -123,7 +123,7 @@ categories: 分类名
 ```shell
 $ hexo new page tags
 ```
-2、你会发现你的`source`文件夹下有了`tags/index.md`，打开`index.md`文件将`title`设置为`title: 标签`
+2、你会发现你的`source`文件夹下有了`tags/index.md`，打开`index.md`文件将`title`设置为`title: 标签`   
 3、打开**主题配置文件**找到`menu`，将`tags`取消注释，标签模块即添加完成    
 
 4、写文章时只需在文章的顶部标题下方添加tags字段，即可自动创建标签名并归入对应的标签中
@@ -139,7 +139,7 @@ tags:
 ```shell
 $ hexo new page about
 ```
-2、你会发现你的`source`文件夹下有了`about/index.md`，打开`index.md`文件即可编辑关于你的信息，可以随便编辑。
+2、你会发现你的`source`文件夹下有了`about/index.md`，打开`index.md`文件即可编辑关于你的信息，可以随便编辑。   
 3、打开 主题配置文件 找到`menu`，将`about`取消注释
 
 ### 10、添加搜索功能
