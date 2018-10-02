@@ -11,15 +11,17 @@
 
 ## hexo 分支管理
 恢复环境
+```bash
 git clone -b hexo https://github.com/aistudying/aistudying.github.io hexo
 cd hexo
 npm install
-
+```
 提交hexo分支修改，删除模块等多余文件
+```bash
 git add .
 git commit -m "source blog"
 git push
-
+```
 ## 配置next主题
 ### 1、基本信息配置
 > 基本信息包括：博客标题、作者、描述、语言等等。
