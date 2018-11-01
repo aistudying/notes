@@ -27,12 +27,12 @@ mkdir pkg
 > 之后构建go项目放在src下面， 生成的安装包会自动放在bin下，生成过程中的中间文件会放在pkg下面
 
 #### 常用包获取
-
+```
 go get github.com/astaxie/beego
 go get github.com/go-sql-driver/mysql
 go get github.com/eclipse/paho.mqtt.golang
 go get gopkg.in/mgo.v2
 go get github.com/beego/bee
-
+```
 默认会下载到GOPATH的src目录下   
 如果使用go get下载较慢，可以使用其他方式将项目代码下载并拷贝到GOPATH的src目录下，然后切换到项目源码下进行编译
