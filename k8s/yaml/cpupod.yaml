@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-pod
+spec:
+  containers:
+    - name: cuda-container
+      image: nvidia/cuda:9.1-devel
+      command:
+      - sleep
+      - "3600"
+
