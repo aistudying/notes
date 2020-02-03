@@ -11,9 +11,9 @@ https://portal.shadowsocks.to/cart.php?gid=1
 vps推荐：Google(免费一年), AWS(免费一年), Azure(免费一年), [Vultr](https://www.vultr.com/?ref=7245210)(前面都用过了就用这个吧，每月3刀)   
 安装脚本：
 ```
-wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh
-chmod +x shadowsocks-libev.sh
-./shadowsocks-libev.sh 2>&1 | tee shadowsocks-libev.log
+wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 ```
 根据提示输入端口，密码等信息，安装完成后的脚本输出
 ```
